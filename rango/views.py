@@ -6,13 +6,12 @@ from django.http import HttpResponse
 
 
 def index(request):
-    context_dict = {'boldmessage' : "Crunchy, creamy, cookie, candy, cupcake!"}
+    context_dict = {'boldmessage': "Crunchy, creamy, cookie, candy, cupcake!"}
     return render(request, 'rango/index.html', context=context_dict)
 
 
 def about(request):
-    link = "<html><body> Rango says here is the about page. <br/> \
-           <a href='/'>Main</a>"
-    return HttpResponse(link)
+    message = {'message': "This tutorial has been put together by ANTI-MUSOR"}
+    return render(request, 'rango/about.html', context=message)
 
 

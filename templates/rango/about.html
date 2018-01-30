@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> About Rango </title>
+</head>
+<body>
+    <p>{{ message }}</p>
+    <a href="/rango/">Back to main</a> <br>
+    <img src="{% static 'images/pepe.jpg' %}" alt="*PEPE_FROG.jPG*"> <br>
+    <img src="{{ MEDIA_URL }}cat.jpg" alt="">
+</body>
+</html>
