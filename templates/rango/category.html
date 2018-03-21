@@ -8,9 +8,11 @@
     <title>Rango</title>
 </head>
 <body>
-    <div>
+    <div class="cats">
     {% if category %}
         <h1>{{ category.name }}</h1>
+        <a href="/">Back to index</a>
+        <a href="{% url 'rango:add_page' category.slug %}">Add a page</a>
         {% if pages %}
             <ul>
                 {% for page in pages %}
