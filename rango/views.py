@@ -74,6 +74,8 @@ def index(request):
 
 
 def about(request):
+    print('method: ', request.method)
+    print('user: ', request.user)
     message = {'message': "This tutorial has been put together by ANTI-MUSOR"}
     return render(request, 'rango/about.html', context=message)
 
