@@ -1,4 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
+{% load staticfiles %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +13,7 @@
     <div class="cats">
     {% if category %}
         <h1>{{ category.name }}</h1>
-        <a href="/">Back to index</a>
+        <a href="{% url 'rango:index' %}">Back to index</a>
         <a href="{% url 'rango:add_page' category.slug %}">Add a page</a>
         {% if pages %}
             <ul>

@@ -8,8 +8,8 @@
 </head>
 <body>
     <p>{{ message }}</p>
-    <a href="/rango/">Back to main</a> <br>
+    <a href="{% url 'rango:index' %}">Back to main</a> <br>
     <img src="{% static 'images/pepe.jpg' %}" alt="*PEPE_FROG.jPG*"> <br>
-    <img src="{{ MEDIA_URL }}cat.jpg" alt="">
+    <img src="{{ MEDIA_URL }}cat.jpg" alt="Cat Photo">
 </body>
 </html>
