@@ -39,6 +39,8 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+# Редирект незалогиненых пользователей на этот урл
+LOGIN_URL = '/rango/login/'
 
 
 # Application definition
