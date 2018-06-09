@@ -28,7 +28,7 @@ class CategoryForm(forms.ModelForm):
     class Meta:
         # Provide an association between the ModelForm and model
         model = Category
-        fields = ('name', )
+        fields = ('name',)
 
 
 class PageForm(forms.ModelForm):
@@ -47,7 +47,7 @@ class PageForm(forms.ModelForm):
         # Some fields may allow NULL values, so we may not want to include them.
         # Here, we are hiding the foreign key.
         # We can either exclude the category field from the form,
-        exclude = ('category', )
+        exclude = ('category',)
         # Or specify the fields to include (i.e. not include the category field)
         # fields = ('title', 'url', 'views', )
 
@@ -62,6 +62,3 @@ class PageForm(forms.ModelForm):
             cleaned_data['url'] = url
 
             return cleaned_data
-
-
-
