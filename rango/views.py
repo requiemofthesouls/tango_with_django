@@ -10,6 +10,8 @@ from django.contrib.auth.decorators import login_required
 from datetime import datetime
 
 
+# Testing tethering by YOTA
+
 @login_required
 def restricted(request):
     return HttpResponse("Since you're logged in, you can see this text!")
