@@ -1,14 +1,15 @@
 {% extends 'rango/base.html' %}
 {% load staticfiles %}
 
-        {% block title_block %}
-            - About Us
-        {% endblock %}
+{% block title_block %}
+    - About Us
+{% endblock %}
 
 {% block body_block %}
-    <p>visits: {{ visits }}</p>
-    <p>last_visit: {{ last_visit }}</p>
-    <i>{{ message }}</i> <br>
-    <img src="{% static 'images/pepe.jpg' %}" alt="*PEPE_FROG.jPG*" width="280" height="auto"> <br>
-    <img src="{{ MEDIA_URL }}cat.jpg" alt="Cat Photo">
+    <h1 class="display-4">About page</h1>
+    <p class="text-secondary">This is <strong>Rango's about page. <br>
+        You visited the site in {{ visits }} occasion(s) <br>
+        Your last visit is: {{ last_visit }} <br>
+        Here's a picture of Rango!</strong></p>
+    <img src="{% static 'images/rango.jpg' %}" alt="RANGO.jPG*" width="280" height="auto"> <br>
 {% endblock %}

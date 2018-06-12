@@ -11,22 +11,22 @@
         {% if category %}
             <h1>{{ category.name }}</h1>
             {% if user.is_authenticated %}
-                <a href="{% url 'rango:add_page' category.slug %}">Add a page</a>
+                <a class="btn btn-outline-primary" href="{% url 'rango:add_page' category.slug %}">Add a page</a>
             {% else %}
-                <p>Please, register or sign in to add a Page.</p>
+                <p class="ml-4 text-secondary">Please, register or sign in to add a Page.</p>
             {% endif %}
 
             {% if pages %}
-                <ul>
+                <ul class="list-group list-group-flush mt-4">
                     {% for page in pages %}
-                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                        <li class="list-group-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
                     {% endfor %}
                 </ul>
             {% else %}
-                <strong>No pages in currently category.</strong>
+                <strong class="ml-4 text-secondary">No pages in currently category.</strong>
             {% endif %}
         {% else %}
-            <p>The specified category does not exist!</p>
+            <p class="ml-4 text-secondary">The specified category does not exist!</p>
         {% endif %}
     </div>
 {% endblock %}
